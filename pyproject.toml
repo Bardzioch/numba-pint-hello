@@ -25,8 +25,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/TWOJA-NAZWA/numba-pint-hello"
-Repository = "https://github.com/TWOJA-NAZWA/numba-pint-hello.git"
+Homepage = "https://github.com/Bardzioch/numba-pint-hello"
+Repository = "https://github.com/Bardzioch/numba-pint-hello.git"
 
 [tool.setuptools_scm]
 write_to = "src/numpi_hello/_version.py"

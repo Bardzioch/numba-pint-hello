@@ -6,6 +6,7 @@ dist/
 build/
 *.eggs/
 *.egg
+src/numpi_hello/_version.py
 
 # Środowisko wirtualne
 venv/
