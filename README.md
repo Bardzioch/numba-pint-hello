@@ -12,4 +12,4 @@ pip install .
 
 | Środowisko | Link |
 |------------|------|
-| **Google Colab** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TWOJA-NAZWA/numba-pint-hello/blob/main/notebooks/demo.ipynb) |
+| **Google Colab** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Bardzioch/numba-pint-hello/blob/main/notebooks/demo.ipynb) |
