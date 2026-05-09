@@ -12,10 +12,10 @@ def test_hello_numba_zero():
 
 def test_hello_pint_conversion():
     out = hello_pint(100.0)
-    assert "100.0 km/h" in out
-    assert "27.78 m/s" in out  # dokładnie 27.777... -> format .2f daje 27.78
+    assert "100.0 km / h" in out
+    assert "27.78 m / s" in out
 
 def test_hello_pint_different_speed():
     out = hello_pint(36.0)
-    assert "36.0 km/h" in out
-    assert "10.00 m/s" in out
+    assert "36.0 km / h" in out
+    assert "10.00 m / s" in out
