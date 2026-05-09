@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61", "setuptools-scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "numpi_hello"
+description = "Przykładowy projekt demonstrujący użycie Numba i Pint"
+readme = "README.md"
+license = {text = "MIT"}  # Zmień, jeśli wybierzesz inną
+requires-python = ">=3.9"
+dynamic = ["version"]
+dependencies = [
+    "numba>=0.57",
+    "pint>=0.22",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "coverage[toml]>=7.3",
+    "sphinx>=7.1",
+    "myst-parser>=2.0",
+    "jupyter>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/TWOJA-NAZWA/numba-pint-hello"
+Repository = "https://github.com/TWOJA-NAZWA/numba-pint-hello.git"
+
+[tool.setuptools_scm]
+write_to = "src/numpi_hello/_version.py"
+write_to_template = "__version__ = \"{version}\"\n"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["numpi_hello"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["numpi_hello"]
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "if __name__ == .__main__.:"]

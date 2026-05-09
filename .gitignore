@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.eggs/
+*.egg
+
+# Środowisko wirtualne
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Coverage
+htmlcov/
+.coverage
+coverage.xml
+
+# Dokumentacja
+docs/_build/

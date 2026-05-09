@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # potrzebne dla setuptools_scm
+
+      - name: Ustaw Pythona
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Instalacja pakietu wraz z zależnościami testowymi
+        run: |
+          pip install --upgrade pip
+          pip install .[dev]
+
+      - name: Uruchom testy
+        run: pytest

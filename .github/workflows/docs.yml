@@ -1,0 +1,35 @@
+name: Docs
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ustaw Pythona
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Instalacja zależności (pakiet + dev)
+        run: |
+          pip install --upgrade pip
+          pip install .[dev]
+
+      - name: Buduj dokumentację
+        run: sphinx-build -b html docs/ docs/_build/html
+
+      - name: Deploy do GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
